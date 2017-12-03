@@ -7,6 +7,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
+
+
 class RegisterController extends Controller
 {
     /*
@@ -28,7 +30,7 @@ class RegisterController extends Controller
      * @var string
      */
     protected $redirectTo = '/home';
-
+    //protected $dates = ['birth_date'];
     /**
      * Create a new controller instance.
      *
@@ -49,9 +51,21 @@ class RegisterController extends Controller
     {
         return Validator::make($data, [
             'name' => 'required|string|max:255',
-            'user_email' => 'required|string|email|max:255|unique:users',
+            'email' => 'required|string|email|max:255|unique:users',
+            'day' => 'required', //birth_date
+            'month' => 'required',//birth_date
+            'year' => 'required',//birth_date
+            'user_city' => 'required|string|max:255',
+            'user_country' => 'required|string|max:255',
+            'languages' => 'required|string',
+            'competences' => 'required|string',
+            'phone_number' => 'between:0,8',
+            //'is_available' => 'boolean',
+            //'job_type' => 'required',
+           // 'is_freelancer' => 'required_without_all:is_permanent',
+            //'is_permanent' => 'required_without_all:is_freelancer',
+
             'password' => 'required|string|min:6|confirmed',
-            'birth_date' => 'required|int',
         ]);
     }
 
@@ -65,11 +79,17 @@ class RegisterController extends Controller
     {
         return User::create([
             'name' => $data['name'],
-            'user_email' => $data['user_email'],
+            'email' => $data['email'],
+            'birth_date' => $data['day'] . '-' . $data['month'] . '-' . $data['year'],
+            'user_city' => $data['user_city'],
+            'user_country' =>$data['user_country'],
+            'languages' => $data['languages'],
+            'competences' => $data['competences'],
+            'phone_number' => $data['phone_number'],
+            'is_available' => isset($data['is_available']) ? 1 : 0, //to check if the checkbox is checked then set the field to 1.
+            'is_freelancer' => isset($data['is_freelancer']) ? 1 : 0,
+            'is_permanent' => isset($data['is_permanent']) ? 1 : 0,
             'password' => bcrypt($data['password']),
-            'age'=> $data['age'],
-
-
         ]);
     }
 }
