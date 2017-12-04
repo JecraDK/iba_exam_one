@@ -4,6 +4,9 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Socialite;
+use Auth;
+use App\User;
 
 class LoginController extends Controller
 {
@@ -37,5 +40,33 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
+    //linkedin login
+    public function redirectToLinkedin()
+    {
+        return Socialite::driver('linkedin')->redirect();
+    }
+
+    public function handleLinkedinCallback()
+    {
+        try {
+            $user = Socialite::driver('linkedin')->user();
+            $create['name'] = $user->name;
+            $create['email'] = $user->email;
+            $create['user_city'] = $user->user['location']['name'];
+            $create['user_country'] = $user->user['location']['country']['code'];
+            $create['password'] = $user->user['id'];
+
+            $create['linkedin_id'] = $user->id;
+
+            $userModel = new User;
+           // dd($user);
+            $createdUser = $userModel->create($create);
+
+            Auth::loginUsingId($createdUser->user_id);
+            return redirect()->route('home');
+        } catch (Exception $e) {
+            return redirect('auth/linkedin');
+        }
+    }
 
 }

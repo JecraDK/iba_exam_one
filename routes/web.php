@@ -21,3 +21,10 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 //to show one ID of users.
 Route::get('/show','UserController@show');
+
+//linkedin
+Route::get('linkedin', function () {
+    return view('login');
+});
+Route::get('auth/linkedin', 'Auth\LoginController@redirectToLinkedin');
+Route::get('auth/linkedin/callback', 'Auth\LoginController@handleLinkedinCallback');
