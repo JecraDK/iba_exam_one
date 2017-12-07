@@ -8350,3 +8350,283 @@ button.close {
   }
 }
 
+.navbar {
+  margin-bottom: 0;
+  background-color: #A7183F;
+  color: #FFFFFF;
+}
+
+.navbar-default .navbar-brand {
+  color: #FFFFFF;
+}
+
+.navbar-default .navbar-brand img {
+  max-width: 100%;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: #FFFFFF;
+}
+
+@font-face {
+  font-family: "AvenirLTStd-Black";
+  src: url("/fonts/epico/AvenirLTStd-Black.woff") format("woff");
+}
+
+@font-face {
+  font-family: "AvenirLTStd-BlackOblique";
+  src: url("/fonts/epico/AvenirLTStd-BlackOblique.woff") format("woff");
+}
+
+@font-face {
+  font-family: "AvenirLTStd-Book";
+  src: url("/fonts/epico/AvenirLTStd-Book.woff") format("woff");
+}
+
+@font-face {
+  font-family: "AvenirLTStd-BookOblique";
+  src: url("/fonts/epico/AvenirLTStd-BookOblique.woff") format("woff");
+}
+
+@font-face {
+  font-family: "AvenirLTStd-Heavy";
+  src: url("/fonts/epico/AvenirLTStd-Heavy.woff") format("woff");
+}
+
+@font-face {
+  font-family: "AvenirLTStd-Light";
+  src: url("/fonts/epico/AvenirLTStd-Light.woff") format("woff");
+}
+
+@font-face {
+  font-family: "AvenirLTStd-LightOblique";
+  src: url("/fonts/epico/AvenirLTStd-LightOblique.woff") format("woff");
+}
+
+@font-face {
+  font-family: "AvenirLTStd-Medium";
+  src: url("/fonts/epico/AvenirLTStd-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "AvenirLTStd-MediumOblique";
+  src: url("/fonts/epico/AvenirLTStd-MediumOblique.woff") format("woff");
+}
+
+@font-face {
+  font-family: "AvenirLTStd-Oblique";
+  src: url("/fonts/epico/AvenirLTStd-Oblique.woff") format("woff");
+}
+
+@font-face {
+  font-family: "AvenirLTStd-Roman";
+  src: url("/fonts/epico/AvenirLTStd-Roman.woff") format("woff");
+}
+
+body {
+  background-color: #FFFFFF;
+  font-family: 'AvenirLTStd-Roman','sans-serif';
+  font-size: 2rem;
+  line-height: 2.5rem;
+  font-weight: 300;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'AvenirLTStd-Black','sans-serif';
+  color: #A7183F;
+}
+
+h1,
+h2 {
+  font-weight: bold;
+}
+
+h1 {
+  color: #000000;
+}
+
+.main-title {
+  border-bottom: 2px solid #A7183F;
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.vacancy-title {
+  border-bottom: 2px solid #A7183F;
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.section-header {
+  background-color: #f4f4f4;
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.epico-separator {
+  background-color: #A7183F;
+  height: 2px;
+}
+
+.epico-border-bottom {
+  background-color: #A7183F;
+  height: 2px;
+  margin-bottom: 2rem;
+  margin-top: 0;
+}
+
+ul.no-style {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.classy-image {
+  margin: 0.5rem;
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
+  border: 2px solid #A7183F;
+  border-radius: 8px;
+}
+
+.classy-text {
+  font-size: 1.8rem;
+  line-height: 3.2rem;
+  margin-bottom: 2.6rem;
+}
+
+.hero-banner {
+  background-image: url("http://lorempixel.com/output/business-q-c-1920-1080-8.jpg");
+  background-size: cover;
+  min-height: 350px;
+  height: 350px;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.hero-banner .hero-banner-content {
+  background-color: rgba(0, 0, 0, 0.45);
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  text-align: center;
+  height: 100%;
+  color: #FFFFFF;
+}
+
+.hero-banner .hero-banner-content h1 {
+  color: #FFFFFF;
+}
+
+.job-list-details {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  border-top: 1px dotted #A7183F;
+  padding-top: 1rem;
+  font-size: 1.5rem;
+}
+
+.job-list-details strong {
+  color: #A7183F;
+}
+
+.job-list-details .job-read-more-link {
+  text-align: right;
+}
+
+.job-title {
+  color: #A7183F;
+  border-bottom: 2px solid #A7183F;
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.job-pretty-description {
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+}
+
+.job-pretty-description p {
+  min-height: 1px;
+  margin-bottom: 1.6rem;
+  display: block;
+  clear: both;
+}
+
+.job-pretty-footer {
+  font-size: 1.4rem;
+  line-height: 2.0rem;
+}
+
+.job-details {
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.login-form {
+  padding-top: 2rem;
+  margin-top: 2rem;
+  border: 2px solid #A7183F;
+  border-radius: 12px;
+  padding-bottom: 4rem;
+}
+
+.login-form .main-title {
+  border-bottom-style: none;
+  margin-bottom: 4rem;
+}
+
+.btn-primary {
+  background-color: #A7183F;
+  border-color: #8c1536;
+}
+
+.btn-primary:hover {
+  background-color: #6e1029;
+}
+
+.btn-primary:focus {
+  background-color: #6e1029;
+}
+
+.location-row {
+  margin-bottom: 3rem;
+}
+
+.location-line {
+  background-color: #A7183F;
+  height: 1px;
+  margin: 0.5rem 0 0.5rem 0;
+}
+
+.location-item {
+  margin-bottom: 3rem;
+}
+
+.contact-details {
+  font-size: 1.4rem;
+  line-height: 2.8rem;
+}
+
+.contact-list-row {
+  margin-bottom: 3.5rem;
+}
+
+.news-item-row {
+  margin-bottom: 4rem;
+}
+
+.news-tags {
+  font-size: 1.6rem;
+}
+

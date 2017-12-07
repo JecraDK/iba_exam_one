@@ -29,7 +29,7 @@ class CreateUsersTable extends Migration
             $table->boolean('is_admin')->default(0);
             $table->string('password');
             //linkedin id
-            $table->string('linkedin_id');
+            $table->string('linkedin_id')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

@@ -60,10 +60,6 @@ class RegisterController extends Controller
             'languages' => 'required|string',
             'competences' => 'required|string',
             'phone_number' => 'between:0,8',
-            //'is_available' => 'boolean',
-            //'job_type' => 'required',
-           // 'is_freelancer' => 'required_without_all:is_permanent',
-            //'is_permanent' => 'required_without_all:is_freelancer',
 
             'password' => 'required|string|min:6|confirmed',
         ]);

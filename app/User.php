@@ -59,7 +59,6 @@ class User extends Authenticatable
         $this->attributes['competences'] = ucwords($value);
     }
 
-    //for boolean that turn to true and false
     protected $casts =
         [
             'is_available' => 'boolean',

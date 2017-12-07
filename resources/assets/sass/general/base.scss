@@ -1,0 +1,112 @@
+@include font-face("AvenirLTStd-Black", '/fonts/epico/AvenirLTStd-Black', null, null, woff);
+@include font-face("AvenirLTStd-BlackOblique", '/fonts/epico/AvenirLTStd-BlackOblique', null, null, woff);
+@include font-face("AvenirLTStd-Book", '/fonts/epico/AvenirLTStd-Book', null, null, woff);
+@include font-face("AvenirLTStd-BookOblique", '/fonts/epico/AvenirLTStd-BookOblique', null, null, woff);
+@include font-face("AvenirLTStd-Heavy", '/fonts/epico/AvenirLTStd-Heavy', null, null, woff);
+@include font-face("AvenirLTStd-Light", '/fonts/epico/AvenirLTStd-Light', null, null, woff);
+@include font-face("AvenirLTStd-LightOblique", '/fonts/epico/AvenirLTStd-LightOblique', null, null, woff);
+@include font-face("AvenirLTStd-Medium", '/fonts/epico/AvenirLTStd-Medium', null, null, woff);
+@include font-face("AvenirLTStd-MediumOblique", '/fonts/epico/AvenirLTStd-MediumOblique', null, null, woff);
+@include font-face("AvenirLTStd-Oblique", '/fonts/epico/AvenirLTStd-Oblique', null, null, woff);
+@include font-face("AvenirLTStd-Roman", '/fonts/epico/AvenirLTStd-Roman', null, null, woff);
+//@include font-face("", '../../fonts/epico/', null, null, woff);
+
+body {
+  background-color: #FFFFFF;
+  font-family: 'AvenirLTStd-Roman','sans-serif';
+  font-size: 2rem;
+  line-height: 2.5rem;
+  font-weight: 300;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'AvenirLTStd-Black','sans-serif';
+  color: #A7183F;
+}
+
+h1, h2 {
+  font-weight: bold;
+}
+
+h1 {
+  color: #000000;
+}
+
+
+.main-title {
+  border-bottom: 2px solid #A7183F;
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.vacancy-title {
+  border-bottom: 2px solid #A7183F;
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.section-header {
+  background-color: #f4f4f4;
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.epico-separator {
+  background-color: #A7183F;
+  height: 2px;
+}
+
+.epico-border-bottom {
+  background-color: #A7183F;
+  height: 2px;
+  margin-bottom: 2rem;
+  margin-top:0;
+}
+
+ul.no-style {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+
+.classy-image {
+  margin: 0.5rem;
+  box-shadow: 0 0 8px rgba(0,0,0,0.25);
+  border: 2px solid #A7183F;
+  border-radius: 8px;
+}
+
+.classy-text {
+  font-size: 1.8rem;
+  line-height: 3.2rem;
+  margin-bottom: 2.6rem;
+}
+
+
+.hero-banner {
+  background-image: url('http://lorempixel.com/output/business-q-c-1920-1080-8.jpg');
+  background-size: cover;
+  min-height: 350px;
+  height: 350px;
+  margin-left: -15px;
+  margin-right: -15px;
+
+  .hero-banner-content {
+    background-color: rgba(0,0,0,0.45);
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    text-align: center;
+    height: 100%;
+    color: #FFFFFF;
+
+    h1 {
+      color: #FFFFFF;
+    }
+  }
+}

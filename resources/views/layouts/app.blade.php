@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>Epico</title>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -29,14 +29,24 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
+                        <img src="{{ asset('img/logo.png') }}" class="" />
                     </a>
                 </div>
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
-                        &nbsp;
+                        @if(Auth::check())
+                        <li>
+                            <a href="{!! route('feeds.jobs') !!}">Vacancies</a>
+                        </li>
+                        <li>
+                            <a href="{!! route('feeds.news') !!}">News</a>
+                        </li>
+                        <li>
+                            <a href="{!! route('contact') !!}">Contact</a>
+                        </li>
+                        @endif
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -63,6 +73,17 @@
                                             {{ csrf_field() }}
                                         </form>
                                     </li>
+                                    <li>
+                                        <a href="{{ route('account.show', Auth::id()) }}">
+                                            Show
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('account.edit', Auth::id()) }}">
+                                            Edit
+                                        </a>
+                                    </li>
+
                                 </ul>
                             </li>
                         @endguest
@@ -71,7 +92,9 @@
             </div>
         </nav>
 
-        @yield('content')
+        <div class="container-fluid">
+            @yield('content')
+        </div>
     </div>
 
     <!-- Scripts -->

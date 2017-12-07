@@ -50,19 +50,27 @@ class LoginController extends Controller
     {
         try {
             $user = Socialite::driver('linkedin')->user();
-            $create['name'] = $user->name;
-            $create['email'] = $user->email;
-            $create['user_city'] = $user->user['location']['name'];
-            $create['user_country'] = $user->user['location']['country']['code'];
-            $create['password'] = $user->user['id'];
+            $local_user = User::where('linkedin_id','=',$user->user['id'])->first();
 
-            $create['linkedin_id'] = $user->id;
+            if($local_user){
+              Auth::loginUsingId($local_user->user_id);
+            }else {
+              $create['name'] = $user->name;
+              $create['email'] = $user->email;
+              $create['user_city'] = $user->user['location']['name'];
+              $create['user_country'] = $user->user['location']['country']['code'];
+              $create['password'] = bcrypt($user->user['id']);
 
-            $userModel = new User;
-           // dd($user);
-            $createdUser = $userModel->create($create);
+              $create['linkedin_id'] = $user->id;
 
-            Auth::loginUsingId($createdUser->user_id);
+              $userModel = new User;
+              // dd($user);
+              $createdUser = $userModel->create($create);
+
+              Auth::loginUsingId($createdUser->user_id);
+            }
+
+
             return redirect()->route('home');
         } catch (Exception $e) {
             return redirect('auth/linkedin');

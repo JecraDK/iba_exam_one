@@ -4,6 +4,20 @@
 
 // Variables
 @import "variables";
+@import "mixin";
 
 // Bootstrap
 @import "~bootstrap-sass/assets/stylesheets/bootstrap";
+
+
+//STYLES
+@import "general/navbar";
+@import "general/base";
+@import "general/profile";
+@import "general/jobs";
+@import "general/login";
+@import "general/buttons";
+@import "general/contact";
+@import "general/news";
+
+@import "general/show";

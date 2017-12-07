@@ -1,13 +1,20 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Login</div>
 
-                <div class="panel-body">
+    <div class="row">
+        <div class="col-xs-12 col-md-8 col-md-offset-2 login-form">
+
+
+            <div class="row">
+                <div class="col-xs-12 text-center">
+                    <h1 class="main-title">Login to your profile</h1>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-xs-12 col-md-8 col-md-offset-2 ">
                     <form class="form-horizontal" method="POST" action="{{ route('login') }}">
                         {{ csrf_field() }}
 
@@ -19,8 +26,8 @@
 
                                 @if ($errors->has('email'))
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
+                                <strong>{{ $errors->first('email') }}</strong>
+                            </span>
                                 @endif
                             </div>
                         </div>
@@ -33,8 +40,8 @@
 
                                 @if ($errors->has('password'))
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
+                                <strong>{{ $errors->first('password') }}</strong>
+                            </span>
                                 @endif
                             </div>
                         </div>
@@ -66,7 +73,7 @@
                     </form>
                 </div>
             </div>
+
         </div>
     </div>
-</div>
 @endsection

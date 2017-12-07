@@ -163,6 +163,8 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+        //adding XML parser
+        Orchestra\Parser\XmlServiceProvider::class,
 
 
         /*
@@ -228,6 +230,8 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         //added Socialite
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
+        //added XML Parser
+        'XmlParser' => Orchestra\Parser\Xml\Facade::class,
 
     ],
 
